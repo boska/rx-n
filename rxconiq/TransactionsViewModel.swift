@@ -11,7 +11,7 @@ import RxAlamofire
 import RxSwift
 import RxCocoa
 
-class TransactionsTableViewModel {
+class TransactionsViewModel {
   let disposeBag = DisposeBag()
   let decoder = JSONDecoder()
   let items: BehaviorRelay<[Transaction]> = BehaviorRelay(value: [])

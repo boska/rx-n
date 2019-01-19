@@ -29,7 +29,7 @@ import RxCocoa
 class TransactionsViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   var disposeBag = DisposeBag()
-  let viewModel = TransactionsTableViewModel()
+  let viewModel = TransactionsViewModel()
 
   override func viewDidLoad() {
     super.viewDidLoad()
