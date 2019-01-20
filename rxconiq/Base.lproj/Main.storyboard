@@ -35,13 +35,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" text="Transaction" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yg-ER-5pP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" text="Transaction" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yg-ER-5pP">
                                                     <rect key="frame" x="25" y="21" width="215" height="58"/>
                                                     <fontDescription key="fontDescription" name="Caveat-Bold" family="Caveat" pointSize="30"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.75299657534246578" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="58" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI5-k1-met">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="58" text="Amount" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hI5-k1-met">
                                                     <rect key="frame" x="250" y="21" width="100" height="58"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="2Vr-mE-DcJ"/>
@@ -88,24 +88,52 @@
                     <navigationItem key="navigationItem" id="fGc-Sp-WSs"/>
                     <connections>
                         <outlet property="tableView" destination="UWy-Wz-eTM" id="anK-cq-yZo"/>
-                        <segue destination="G81-ud-a7b" kind="show" identifier="user" id="2eJ-h4-WDZ"/>
+                        <segue destination="G81-ud-a7b" kind="show" identifier="detail" id="2eJ-h4-WDZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="980" y="26.53673163418291"/>
         </scene>
-        <!--View Controller-->
+        <!--Transaction View Controller-->
         <scene sceneID="cbM-U4-1my">
             <objects>
-                <viewController id="G81-ud-a7b" sceneMemberID="viewController">
+                <viewController id="G81-ud-a7b" customClass="TransactionViewController" customModule="rxconiq" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OW7-A9-jle">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pUp-Ul-aUQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kw-52-16A">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="Caveat-Bold" family="Caveat" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzv-k6-9zK">
+                                        <rect key="frame" x="0.0" y="31.5" width="375" height="571.5"/>
+                                        <fontDescription key="fontDescription" name="Caveat-Bold" family="Caveat" pointSize="40"/>
+                                        <state key="normal" title="Open In Map"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.73825114970000005" green="0.64802247290000003" blue="0.5339257717" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="erv-2J-Gbb" firstAttribute="trailing" secondItem="pUp-Ul-aUQ" secondAttribute="trailing" id="HxY-iW-zWF"/>
+                            <constraint firstItem="pUp-Ul-aUQ" firstAttribute="leading" secondItem="erv-2J-Gbb" secondAttribute="leading" id="LG8-td-iBd"/>
+                            <constraint firstItem="erv-2J-Gbb" firstAttribute="bottom" secondItem="pUp-Ul-aUQ" secondAttribute="bottom" id="Upk-Yd-2Jc"/>
+                            <constraint firstItem="pUp-Ul-aUQ" firstAttribute="top" secondItem="erv-2J-Gbb" secondAttribute="top" id="d1Y-Bz-LzV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="erv-2J-Gbb"/>
                     </view>
                     <navigationItem key="navigationItem" id="1ri-h0-Pdf"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="5Kw-52-16A" id="ETC-zv-dOE"/>
+                        <outlet property="openInAppleMap" destination="rzv-k6-9zK" id="76x-vX-B52"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="siB-Qt-hZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,4 +162,5 @@
             <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

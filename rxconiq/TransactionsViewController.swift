@@ -36,24 +36,33 @@ class TransactionsViewController: UIViewController {
     tableView.dataSource = nil
 
     viewModel.items
-      .asObservable()
-      .bind(to: tableView.rx.items(cellIdentifier: "Cell", cellType: TransactionCell.self)) { (_, data, cell) in
+      .asDriver().drive(tableView.rx.items(cellIdentifier: "Cell", cellType: TransactionCell.self)) { (_, data, cell) in
         cell.configure(data: data)
-      }.disposed(by: disposeBag)
+    }.disposed(by: disposeBag)
+
 
     tableView.rx.modelSelected(Transaction.self)
       .subscribe {
-        print($0)
-        self.performSegue(withIdentifier: "user", sender: nil)
+        self.performSegue(withIdentifier: "detail", sender: $0.element)
       }.disposed(by: disposeBag)
 
     tableView.rx.contentOffset
+      .skip(1)
       .filter { $0.y >= self.tableView.contentSize.height - self.tableView.frame.size.height }
-      .skipWhile { _ in self.viewModel.items.value.isEmpty }
       .debounce(0.5, scheduler: MainScheduler.instance)
       .map { _ in true }
       .bind(to: viewModel.loadNextPage)
       .disposed(by: disposeBag)
+
+  }
+}
+
+extension TransactionsViewController {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard
+      let destinationVC = segue.destination as? TransactionViewController, let transaction = sender as? Transaction
+      else { return }
+    destinationVC.model.accept(transaction)
   }
 }
 

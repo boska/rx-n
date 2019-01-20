@@ -11,6 +11,7 @@
 		8DA9360421F239460082FC70 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360321F239460082FC70 /* Transaction.swift */; };
 		8DA9360621F239590082FC70 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360521F239590082FC70 /* User.swift */; };
 		8DA9360821F2F5FC0082FC70 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360721F2F5FC0082FC70 /* TransactionsViewModel.swift */; };
+		8DA9360A21F2FCD90082FC70 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360921F2FCD90082FC70 /* TransactionViewController.swift */; };
 		8DC8189F21F1845B00519072 /* Caveat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DC8189E21F1845B00519072 /* Caveat-Regular.ttf */; };
 		8DF46F0821F02FD900ABB608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF46F0721F02FD900ABB608 /* AppDelegate.swift */; };
 		8DF46F0A21F02FD900ABB608 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF46F0921F02FD900ABB608 /* TransactionsViewController.swift */; };
@@ -50,6 +51,7 @@
 		8DA9360321F239460082FC70 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		8DA9360521F239590082FC70 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8DA9360721F2F5FC0082FC70 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		8DA9360921F2FCD90082FC70 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		8DC8189E21F1845B00519072 /* Caveat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Caveat-Regular.ttf"; sourceTree = "<group>"; };
 		8DF46F0421F02FD900ABB608 /* rxconiq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rxconiq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF46F0721F02FD900ABB608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				8D03912721F22C39002EFA66 /* Caveat-Bold.ttf */,
 				8DF46F0721F02FD900ABB608 /* AppDelegate.swift */,
 				8DF46F0921F02FD900ABB608 /* TransactionsViewController.swift */,
+				8DA9360921F2FCD90082FC70 /* TransactionViewController.swift */,
 				8DA9360721F2F5FC0082FC70 /* TransactionsViewModel.swift */,
 				8DA9360321F239460082FC70 /* Transaction.swift */,
 				8DA9360521F239590082FC70 /* User.swift */,
@@ -415,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA9360621F239590082FC70 /* User.swift in Sources */,
+				8DA9360A21F2FCD90082FC70 /* TransactionViewController.swift in Sources */,
 				8DA9360821F2F5FC0082FC70 /* TransactionsViewModel.swift in Sources */,
 				8DF46F0A21F02FD900ABB608 /* TransactionsViewController.swift in Sources */,
 				8DF46F0821F02FD900ABB608 /* AppDelegate.swift in Sources */,
