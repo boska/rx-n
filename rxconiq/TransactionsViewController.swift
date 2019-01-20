@@ -62,7 +62,7 @@ extension TransactionsViewController {
     guard
       let destinationVC = segue.destination as? TransactionViewController, let transaction = sender as? Transaction
       else { return }
-    destinationVC.model.accept(transaction)
+    destinationVC.model = transaction
   }
 }
 

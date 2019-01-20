@@ -13,27 +13,25 @@ import RxSwift
 import RxCocoa
 
 class TransactionViewController: UIViewController {
-  let model = BehaviorRelay<Transaction?>.init(value: nil)
+  var model: Transaction? 
   let encoder = JSONEncoder()
   let disposeBag = DisposeBag()
   @IBOutlet weak var openInAppleMap: UIButton!
   @IBOutlet weak var detailLabel: UILabel!
   override func viewDidLoad() {
     encoder.outputFormatting = .prettyPrinted
-    //view model
-    model
-      .asObservable()
-      .unwrap()
+    guard let transaction = self.model
+      else {
+        return
+    }
+    
+    _ = Observable.just(transaction)
       .map { try self.encoder.encode($0) }
       .map { String(data: $0, encoding: .utf8) }
       .bind(to: detailLabel.rx.text)
       .disposed(by: disposeBag)
 
     openInAppleMap.rx.tap.subscribe { _ in
-      guard let transaction = self.model.value
-        else {
-          return
-      }
       let coordinates = transaction.coordinates
         .split(separator: ",")
         .map { Double($0.replacingOccurrences(of: " ", with: "")) ?? 0.0 }
