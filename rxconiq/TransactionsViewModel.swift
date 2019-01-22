@@ -19,7 +19,7 @@ final class TransactionsViewModel {
   private let sourceURL = BehaviorRelay(value: "http://demo5481020.mockable.io/transactions")
   init() {
     _ = Observable.zip(sourceURL, loadNextPage) // change zip to combineLatest to see infinite scroll
-      .debug("🌍")
+    .debug("🌍")
       .flatMapLatest { requestData(.get, $0.0) }
       .do(onNext: { [unowned self] in
         guard let nextPage = $0.0.allHeaderFields["next-page"] as? String else {
@@ -32,6 +32,6 @@ final class TransactionsViewModel {
       .map { try self.decoder.decode([Transaction].self, from: $0.1) }
       .asDriver(onErrorJustReturn: [])
       .scan([]) { $0 + $1 } // items manipulate
-      .drive(items)
+    .drive(items)
   }
 }
