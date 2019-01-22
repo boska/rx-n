@@ -5,46 +5,35 @@
 //  Created by Boska on 2019/1/17.
 //  Copyright © 2019 boska. All rights reserved.
 //
+/*
+ db   db d88888b db      db       .d88b.
+ 88   88 88'     88      88      .8P  Y8.
+ 88ooo88 88ooooo 88      88      88    88
+ 88~~~88 88~~~~~ 88      88      88    88
+ 88   88 88.     88booo. 88booo. `8b  d8'
+ YP   YP Y88888P Y88888P Y88888P  `Y88P'
+ 
+ d8888b.  .d8b.  db    db  .o88b.  .d88b.  d8b   db d888888b  .d88b.
+ 88  `8D d8' `8b `8b  d8' d8P  Y8 .8P  Y8. 888o  88   `88'   .8P  Y8.
+ 88oodD' 88ooo88  `8bd8'  8P      88    88 88V8o 88    88    88    88
+ 88~~~   88~~~88    88    8b      88    88 88 V8o88    88    88    88
+ 88      88   88    88    Y8b  d8 `8b  d8' 88  V888   .88.   `8P  d8'
+ 88      YP   YP    YP     `Y88P'  `Y88P'  VP   V8P Y888888P  `Y88'Y8
+ */
 
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
   var window: UIWindow?
-
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
     let tab = UITabBarController(nibName: nil, bundle: nil)
     tab.viewControllers = [TransactionsViewController(viewModel: TransactionsViewModel()), UserViewController(viewModel: UserViewModel())]
+    TinyRouter.shared.root = tab
     window?.rootViewController = tab
     return true
   }
-
-  func applicationWillResignActive(_ application: UIApplication) {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-  }
-
-  func applicationDidEnterBackground(_ application: UIApplication) {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-  }
-
-  func applicationWillEnterForeground(_ application: UIApplication) {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-  }
-
-  func applicationDidBecomeActive(_ application: UIApplication) {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-  }
-
-  func applicationWillTerminate(_ application: UIApplication) {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-  }
-
-
 }
 
