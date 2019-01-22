@@ -9,10 +9,11 @@
 import Foundation
 
 struct User: Codable {
-  var name: String
-  var surname: String
-  var birthdate: String
-  var nationality: String
+  var name: String = "Loading..."
+  var surname: String = ""
+  var birthdate: String = ""
+  var nationality: String = ""
+  
   enum CodingKeys: String, CodingKey {
     case name
     case surname

@@ -36,7 +36,7 @@ class TransactionsViewController: UIViewController {
   init(viewModel: TransactionsViewModel) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
-
+    self.title = "Transactions"
     setupConstraints()
 
     tableView.translatesAutoresizingMaskIntoConstraints = true
@@ -60,7 +60,6 @@ class TransactionsViewController: UIViewController {
         cell.configure(data: data)
       }.disposed(by: disposeBag)
 
-
     tableView.rx.modelSelected(Transaction.self)
       .subscribe {
       }.disposed(by: disposeBag)
@@ -75,12 +74,7 @@ class TransactionsViewController: UIViewController {
 
   }
   func setupConstraints() {
-//    constrain(topView, containerView) { topView, containerView in
-//      topView.top == containerView.top
-//      topView.left == containerView.left
-//      topView.right == containerView.right
-//      topView.height == 64
-//    }
+
   }
 }
 

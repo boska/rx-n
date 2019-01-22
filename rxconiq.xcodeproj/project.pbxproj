@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D141CD121F7036E00597C07 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D141CD021F7036E00597C07 /* UserViewController.swift */; };
 		8DA9360421F239460082FC70 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360321F239460082FC70 /* Transaction.swift */; };
 		8DA9360621F239590082FC70 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360521F239590082FC70 /* User.swift */; };
 		8DA9360821F2F5FC0082FC70 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360721F2F5FC0082FC70 /* TransactionsViewModel.swift */; };
@@ -43,6 +44,7 @@
 		3187C0C8FEF07E61D24BF936 /* Pods-rxconiqTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxconiqTests.debug.xcconfig"; path = "Target Support Files/Pods-rxconiqTests/Pods-rxconiqTests.debug.xcconfig"; sourceTree = "<group>"; };
 		58E0388CE8991CF65DC274CD /* Pods-rxconiqTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxconiqTests.release.xcconfig"; path = "Target Support Files/Pods-rxconiqTests/Pods-rxconiqTests.release.xcconfig"; sourceTree = "<group>"; };
 		6AFB1F66C4D1D2386D958DC8 /* Pods-rxconiq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxconiq.release.xcconfig"; path = "Target Support Files/Pods-rxconiq/Pods-rxconiq.release.xcconfig"; sourceTree = "<group>"; };
+		8D141CD021F7036E00597C07 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8DA9360321F239460082FC70 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		8DA9360521F239590082FC70 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8DA9360721F2F5FC0082FC70 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				8DF46F0721F02FD900ABB608 /* AppDelegate.swift */,
 				8DF46F0921F02FD900ABB608 /* TransactionsViewController.swift */,
 				8DA9360721F2F5FC0082FC70 /* TransactionsViewModel.swift */,
+				8D141CD021F7036E00597C07 /* UserViewController.swift */,
 				8DA9360321F239460082FC70 /* Transaction.swift */,
 				8DA9360521F239590082FC70 /* User.swift */,
 				8DF46F0E21F02FDA00ABB608 /* Assets.xcassets */,
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA9360621F239590082FC70 /* User.swift in Sources */,
+				8D141CD121F7036E00597C07 /* UserViewController.swift in Sources */,
 				8DA9360821F2F5FC0082FC70 /* TransactionsViewModel.swift in Sources */,
 				8DF46F0A21F02FD900ABB608 /* TransactionsViewController.swift in Sources */,
 				8DF46F0821F02FD900ABB608 /* AppDelegate.swift in Sources */,
