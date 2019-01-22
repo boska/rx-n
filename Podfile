@@ -7,7 +7,6 @@ target 'rxconiq' do
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
     pod 'RxAlamofire'
-    pod 'RxDataSources', '~> 3.0'
     pod 'Cartography', '~> 3.0'
 end
 

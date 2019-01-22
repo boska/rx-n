@@ -9,6 +9,7 @@
 import Foundation
 
 import MapKit
+
 func transactionAlertController(transaction: Transaction) -> UIAlertController {
   let view = UIAlertController(title: "\(transaction.description) € \(transaction.amount) \n \(transaction.effectiveDate)", message: transaction.coordinates, preferredStyle: .actionSheet)
   view.addAction(UIAlertAction(title: "Open In Maps", style: .default, handler: {
