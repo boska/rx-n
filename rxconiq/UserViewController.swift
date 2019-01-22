@@ -12,18 +12,6 @@ import RxSwift
 import RxCocoa
 import Cartography
 
-final class UserViewModel {
-  let user = BehaviorRelay.init(value: User())
-  private let decoder = JSONDecoder()
-  private let disposeBag = DisposeBag()
-
-  init() {
-    _ = requestData(.get, "http://demo5481020.mockable.io/userinfo")
-      .map { try self.decoder.decode(User.self, from: $0.1) }
-      .asDriver(onErrorJustReturn: User())
-      .drive(user)
-  }
-}
 final class UserViewController: UIViewController {
   private var disposeBag = DisposeBag()
   private let viewModel: UserViewModel
