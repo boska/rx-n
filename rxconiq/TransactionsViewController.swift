@@ -26,11 +26,13 @@ import RxAlamofire
 import RxSwift
 import RxCocoa
 import Cartography
-
-class TransactionsViewController: UIViewController {
-  let tableView = UITableView()
-  var disposeBag = DisposeBag()
-  let viewModel: TransactionsViewModel
+enum Route {
+  case transactionsDetail
+}
+final class TransactionsViewController: UIViewController {
+  private let tableView = UITableView()
+  private var disposeBag = DisposeBag()
+  private let viewModel: TransactionsViewModel
 
 
   init(viewModel: TransactionsViewModel) {
@@ -73,7 +75,7 @@ class TransactionsViewController: UIViewController {
       .disposed(by: disposeBag)
 
   }
-  func setupConstraints() {
+  private func setupConstraints() {
 
   }
 }
@@ -84,9 +86,9 @@ extension TransactionsViewController: UITableViewDelegate {
   }
 }
 
-class TransactionCell: UITableViewCell {
-  let descriptionLabel: UILabel
-  let amountLabel: UILabel
+final class TransactionCell: UITableViewCell {
+  private let descriptionLabel: UILabel
+  private let amountLabel: UILabel
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     self.descriptionLabel = UILabel()
@@ -102,7 +104,7 @@ class TransactionCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
 
-  func setupConstraints() {
+  private func setupConstraints() {
     constrain(descriptionLabel, amountLabel, self) { descriptionLabel, amountLabel, view in
       descriptionLabel.top == view.top + 16
       descriptionLabel.left == view.left + 16
@@ -117,5 +119,6 @@ class TransactionCell: UITableViewCell {
   func configure(data: Transaction) {
     descriptionLabel.text = data.description
     amountLabel.text = "€ \(data.amount)"
+    amountLabel.textColor = data.amount.hasPrefix("-") ? .red : .black
   }
 }

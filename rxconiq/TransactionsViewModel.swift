@@ -11,12 +11,12 @@ import RxAlamofire
 import RxSwift
 import RxCocoa
 
-class TransactionsViewModel {
-  let disposeBag = DisposeBag()
-  let decoder = JSONDecoder()
+final class TransactionsViewModel {
   let items: BehaviorRelay<[Transaction]> = BehaviorRelay(value: [])
-  let sourceURL = BehaviorRelay(value: "http://demo5481020.mockable.io/transactions")
   let loadNextPage = BehaviorSubject(value: true)
+  private let disposeBag = DisposeBag()
+  private let decoder = JSONDecoder()
+  private let sourceURL = BehaviorRelay(value: "http://demo5481020.mockable.io/transactions")
   init() {
     _ = Observable.zip(sourceURL, loadNextPage) // change zip to combineLatest to see infinite scroll
       .debug("🌍")

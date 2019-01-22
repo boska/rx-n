@@ -12,10 +12,10 @@ import RxSwift
 import RxCocoa
 import Cartography
 
-class UserViewModel {
+final class UserViewModel {
   let user = BehaviorRelay.init(value: User())
-  let decoder = JSONDecoder()
-  let disposeBag = DisposeBag()
+  private let decoder = JSONDecoder()
+  private let disposeBag = DisposeBag()
 
   init() {
     _ = requestData(.get, "http://demo5481020.mockable.io/userinfo")
@@ -24,10 +24,10 @@ class UserViewModel {
       .drive(user)
   }
 }
-class UserViewController: UIViewController {
-  var disposeBag = DisposeBag()
-  let viewModel: UserViewModel
-  let userLabel = UILabel()
+final class UserViewController: UIViewController {
+  private var disposeBag = DisposeBag()
+  private let viewModel: UserViewModel
+  private let userLabel = UILabel()
 
   init(viewModel: UserViewModel) {
     self.viewModel = viewModel
@@ -64,7 +64,7 @@ class UserViewController: UIViewController {
       .disposed(by: disposeBag)
 
   }
-  func setupConstraints() {
+  private func setupConstraints() {
 
     constrain(userLabel, self.view) { userLabel, view in
       userLabel.edges == view.edges
