@@ -25,44 +25,62 @@ import UIKit
 import RxAlamofire
 import RxSwift
 import RxCocoa
+import Cartography
 
 class TransactionsViewController: UIViewController {
-  @IBOutlet weak var tableView: UITableView!
+  let tableView = UITableView()
   var disposeBag = DisposeBag()
-  let viewModel = TransactionsViewModel()
+  let viewModel: TransactionsViewModel
+
+
+  init(viewModel: TransactionsViewModel) {
+    self.viewModel = viewModel
+    super.init(nibName: nil, bundle: nil)
+
+    setupConstraints()
+
+    tableView.translatesAutoresizingMaskIntoConstraints = true
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  override func loadView() {
+    self.view = tableView
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.dataSource = nil
+    tableView.register(TransactionCell.self, forCellReuseIdentifier: "Cell")
 
     viewModel.items
       .asDriver().drive(tableView.rx.items(cellIdentifier: "Cell", cellType: TransactionCell.self)) { (_, data, cell) in
         cell.configure(data: data)
-    }.disposed(by: disposeBag)
+      }.disposed(by: disposeBag)
 
 
     tableView.rx.modelSelected(Transaction.self)
       .subscribe {
-        self.performSegue(withIdentifier: "detail", sender: $0.element)
       }.disposed(by: disposeBag)
 
     tableView.rx.contentOffset
-      .skip(1)
       .filter { $0.y >= self.tableView.contentSize.height - self.tableView.frame.size.height }
+      .skip(2)
       .debounce(0.5, scheduler: MainScheduler.instance)
       .map { _ in true }
       .bind(to: viewModel.loadNextPage)
       .disposed(by: disposeBag)
 
   }
-}
-
-extension TransactionsViewController {
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    guard
-      let destinationVC = segue.destination as? TransactionViewController, let transaction = sender as? Transaction
-      else { return }
-    destinationVC.model = transaction
+  func setupConstraints() {
+//    constrain(topView, containerView) { topView, containerView in
+//      topView.top == containerView.top
+//      topView.left == containerView.left
+//      topView.right == containerView.right
+//      topView.height == 64
+//    }
   }
 }
 
@@ -73,8 +91,35 @@ extension TransactionsViewController: UITableViewDelegate {
 }
 
 class TransactionCell: UITableViewCell {
-  @IBOutlet weak var descriptionLabel: UILabel!
-  @IBOutlet weak var amountLabel: UILabel!
+  let descriptionLabel: UILabel
+  let amountLabel: UILabel
+
+  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    self.descriptionLabel = UILabel()
+    self.amountLabel = UILabel()
+
+    super.init(style: style, reuseIdentifier: reuseIdentifier)
+    self.addSubview(descriptionLabel)
+    self.addSubview(amountLabel)
+    setupConstraints()
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  func setupConstraints() {
+    constrain(descriptionLabel, amountLabel, self) { descriptionLabel, amountLabel, view in
+      descriptionLabel.top == view.top + 16
+      descriptionLabel.left == view.left + 16
+      descriptionLabel.bottom == view.bottom - 16
+      descriptionLabel.right == amountLabel.left
+      amountLabel.top == view.top + 16
+      amountLabel.right == view.right - 16
+      amountLabel.bottom == view.bottom - 16
+    }
+  }
+
   func configure(data: Transaction) {
     descriptionLabel.text = data.description
     amountLabel.text = "€ \(data.amount)"

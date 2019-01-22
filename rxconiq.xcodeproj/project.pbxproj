@@ -7,15 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D03912821F22C39002EFA66 /* Caveat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D03912721F22C39002EFA66 /* Caveat-Bold.ttf */; };
 		8DA9360421F239460082FC70 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360321F239460082FC70 /* Transaction.swift */; };
 		8DA9360621F239590082FC70 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360521F239590082FC70 /* User.swift */; };
 		8DA9360821F2F5FC0082FC70 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360721F2F5FC0082FC70 /* TransactionsViewModel.swift */; };
-		8DA9360A21F2FCD90082FC70 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360921F2FCD90082FC70 /* TransactionViewController.swift */; };
-		8DC8189F21F1845B00519072 /* Caveat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DC8189E21F1845B00519072 /* Caveat-Regular.ttf */; };
 		8DF46F0821F02FD900ABB608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF46F0721F02FD900ABB608 /* AppDelegate.swift */; };
 		8DF46F0A21F02FD900ABB608 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF46F0921F02FD900ABB608 /* TransactionsViewController.swift */; };
-		8DF46F0D21F02FD900ABB608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DF46F0B21F02FD900ABB608 /* Main.storyboard */; };
 		8DF46F0F21F02FDA00ABB608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DF46F0E21F02FDA00ABB608 /* Assets.xcassets */; };
 		8DF46F1221F02FDA00ABB608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DF46F1021F02FDA00ABB608 /* LaunchScreen.storyboard */; };
 		8DF46F1D21F02FDA00ABB608 /* rxconiqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF46F1C21F02FDA00ABB608 /* rxconiqTests.swift */; };
@@ -47,16 +43,12 @@
 		3187C0C8FEF07E61D24BF936 /* Pods-rxconiqTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxconiqTests.debug.xcconfig"; path = "Target Support Files/Pods-rxconiqTests/Pods-rxconiqTests.debug.xcconfig"; sourceTree = "<group>"; };
 		58E0388CE8991CF65DC274CD /* Pods-rxconiqTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxconiqTests.release.xcconfig"; path = "Target Support Files/Pods-rxconiqTests/Pods-rxconiqTests.release.xcconfig"; sourceTree = "<group>"; };
 		6AFB1F66C4D1D2386D958DC8 /* Pods-rxconiq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxconiq.release.xcconfig"; path = "Target Support Files/Pods-rxconiq/Pods-rxconiq.release.xcconfig"; sourceTree = "<group>"; };
-		8D03912721F22C39002EFA66 /* Caveat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Caveat-Bold.ttf"; sourceTree = "<group>"; };
 		8DA9360321F239460082FC70 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		8DA9360521F239590082FC70 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8DA9360721F2F5FC0082FC70 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
-		8DA9360921F2FCD90082FC70 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
-		8DC8189E21F1845B00519072 /* Caveat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Caveat-Regular.ttf"; sourceTree = "<group>"; };
 		8DF46F0421F02FD900ABB608 /* rxconiq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rxconiq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DF46F0721F02FD900ABB608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DF46F0921F02FD900ABB608 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
-		8DF46F0C21F02FD900ABB608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DF46F0E21F02FDA00ABB608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DF46F1121F02FDA00ABB608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DF46F1321F02FDA00ABB608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,15 +133,11 @@
 		8DF46F0621F02FD900ABB608 /* rxconiq */ = {
 			isa = PBXGroup;
 			children = (
-				8DC8189E21F1845B00519072 /* Caveat-Regular.ttf */,
-				8D03912721F22C39002EFA66 /* Caveat-Bold.ttf */,
 				8DF46F0721F02FD900ABB608 /* AppDelegate.swift */,
 				8DF46F0921F02FD900ABB608 /* TransactionsViewController.swift */,
-				8DA9360921F2FCD90082FC70 /* TransactionViewController.swift */,
 				8DA9360721F2F5FC0082FC70 /* TransactionsViewModel.swift */,
 				8DA9360321F239460082FC70 /* Transaction.swift */,
 				8DA9360521F239590082FC70 /* User.swift */,
-				8DF46F0B21F02FD900ABB608 /* Main.storyboard */,
 				8DF46F0E21F02FDA00ABB608 /* Assets.xcassets */,
 				8DF46F1021F02FDA00ABB608 /* LaunchScreen.storyboard */,
 				8DF46F1321F02FDA00ABB608 /* Info.plist */,
@@ -284,10 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DF46F1221F02FDA00ABB608 /* LaunchScreen.storyboard in Resources */,
-				8DC8189F21F1845B00519072 /* Caveat-Regular.ttf in Resources */,
 				8DF46F0F21F02FDA00ABB608 /* Assets.xcassets in Resources */,
-				8DF46F0D21F02FD900ABB608 /* Main.storyboard in Resources */,
-				8D03912821F22C39002EFA66 /* Caveat-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +325,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-rxconiq/Pods-rxconiq-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -351,6 +337,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -418,7 +405,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DA9360621F239590082FC70 /* User.swift in Sources */,
-				8DA9360A21F2FCD90082FC70 /* TransactionViewController.swift in Sources */,
 				8DA9360821F2F5FC0082FC70 /* TransactionsViewModel.swift in Sources */,
 				8DF46F0A21F02FD900ABB608 /* TransactionsViewController.swift in Sources */,
 				8DF46F0821F02FD900ABB608 /* AppDelegate.swift in Sources */,
@@ -458,14 +444,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8DF46F0B21F02FD900ABB608 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8DF46F0C21F02FD900ABB608 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8DF46F1021F02FDA00ABB608 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
