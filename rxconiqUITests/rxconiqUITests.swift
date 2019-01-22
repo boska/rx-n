@@ -26,7 +26,16 @@ class rxconiqUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+  
+ 
     func testExample() {
+      let app = XCUIApplication()
+      app.tables/*@START_MENU_TOKEN@*/.staticTexts["Transaction 10"]/*[[".cells.staticTexts[\"Transaction 10\"]",".staticTexts[\"Transaction 10\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+      XCTAssert(app.sheets["Transaction 10 € 38,46 \n 16-02-18 4:08"].exists)
+
+      app.sheets["Transaction 10 € 38,46 \n 16-02-18 4:08"].buttons["Cancel"].tap()
+      XCTAssertFalse(app.sheets["Transaction 10 € 38,46 \n 16-02-18 4:08"].exists)
+
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
