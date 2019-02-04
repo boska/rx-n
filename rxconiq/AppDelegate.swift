@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
     let tab = UITabBarController(nibName: nil, bundle: nil)
-    tab.viewControllers = [TransactionsViewController(viewModel: TransactionsViewModel()), UserViewController(viewModel: UserViewModel())]
+    tab.viewControllers = [TransactionsViewController(viewModel: TransactionsViewModel(provider: transactionsProvider)), UserViewController(viewModel: UserViewModel())]
     TinyRouter.shared.root = tab
     window?.rootViewController = tab
     return true
