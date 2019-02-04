@@ -15,10 +15,11 @@ class rxconiqUITests: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
+      let app = XCUIApplication()
+      app.launchArguments = ["testMode"]
 
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
+      app.launch()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
@@ -30,7 +31,7 @@ class rxconiqUITests: XCTestCase {
  
     func testExample() {
       let app = XCUIApplication()
-      app.tables/*@START_MENU_TOKEN@*/.staticTexts["Transaction 10"]/*[[".cells.staticTexts[\"Transaction 10\"]",".staticTexts[\"Transaction 10\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+      app.tables.staticTexts["Transaction 10"].tap()
       XCTAssert(app.sheets["Transaction 10 € 38,46 \n 16-02-18 4:08"].exists)
 
       app.sheets["Transaction 10 € 38,46 \n 16-02-18 4:08"].buttons["Cancel"].tap()

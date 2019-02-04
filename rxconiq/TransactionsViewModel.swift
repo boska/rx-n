@@ -17,7 +17,6 @@ struct TransactionsViewModel {
   init(provider: Observable<[Transaction]>) {
     _ = Observable.zip(loadNextPage, provider)
       .map { $1 }
-      .debug("load")
       .asDriver(onErrorJustReturn: [])
       .scan([]) { $0 + $1 } /* item manipulate */
       .drive(items)
