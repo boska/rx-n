@@ -50,7 +50,7 @@ final class TransactionsViewController: UIViewController {
       }).disposed(by: disposeBag)
 
     tableView.rx.contentOffset
-      .filter { $0.y >= self.tableView.contentSize.height - self.tableView.frame.size.height }
+      .filter { [tableView] in $0.y >= tableView.contentSize.height - tableView.frame.size.height }
       .skip(2)
       .debounce(0.5, scheduler: MainScheduler.instance)
       .map { _ in true }

@@ -25,15 +25,16 @@ struct User: Codable {
   }
 }
 
-final class UserViewModel {
+struct UserViewModel {
   let user = BehaviorRelay.init(value: User())
   private let decoder = JSONDecoder()
   private let disposeBag = DisposeBag()
   
   init() {
     _ = requestData(.get, "http://demo5481020.mockable.io/userinfo")
-      .map { try self.decoder.decode(User.self, from: $0.1) }
+      .map { [decoder] in try decoder.decode(User.self, from: $0.1) }
       .asDriver(onErrorJustReturn: User())
       .drive(user)
+      .disposed(by: disposeBag)
   }
 }
