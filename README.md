@@ -1,5 +1,9 @@
 # RxConiq
 
+Mock API
+http://demo5481020.mockable.io/transactions
+http://demo5481020.mockable.io/userinfo
+
 # Run
 
 ```
