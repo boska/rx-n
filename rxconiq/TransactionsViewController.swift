@@ -7,10 +7,7 @@
 //
 
 import UIKit
-import RxAlamofire
 import RxSwift
-import RxCocoa
-import Cartography
 
 final class TransactionsViewController: UIViewController {
   private let tableView = UITableView()
@@ -38,7 +35,7 @@ final class TransactionsViewController: UIViewController {
     tableView.register(TransactionCell.self, forCellReuseIdentifier: "Cell")
 
     viewModel.items
-      .asDriver().drive(tableView.rx.items(cellIdentifier: "Cell", cellType: TransactionCell.self)) { (_, data, cell) in
+      .drive(tableView.rx.items(cellIdentifier: "Cell", cellType: TransactionCell.self)) { (_, data, cell) in
         cell.configure(data: data)
       }.disposed(by: disposeBag)
 
@@ -49,13 +46,13 @@ final class TransactionsViewController: UIViewController {
       }).disposed(by: disposeBag)
 
     tableView.rx.contentOffset
-      .filter { [tableView] in $0.y >= tableView.contentSize.height - tableView.frame.size.height }
-      .skip(2)
+      .filter { [tableView] in
+        tableView.contentSize.height > 0 && $0.y >= tableView.contentSize.height - tableView.frame.size.height }
       .debounce(0.5, scheduler: MainScheduler.instance)
       .map { _ in true }
       .bind(to: viewModel.loadNextPage)
       .disposed(by: disposeBag)
-
+    
   }
 }
 
