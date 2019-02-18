@@ -11,6 +11,7 @@ Mock API
 # Run
 
 ```
+sudo gem install cocoapods
 pod install
 ```
 
