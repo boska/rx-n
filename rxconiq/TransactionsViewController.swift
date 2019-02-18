@@ -40,7 +40,6 @@ final class TransactionsViewController: UIViewController {
       }.disposed(by: disposeBag)
 
     tableView.rx.modelSelected(Transaction.self)
-      .debug("🔍")
       .subscribe (onNext: {
         TinyRouter.shared.navigate(to: $0)
       }).disposed(by: disposeBag)

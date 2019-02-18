@@ -35,7 +35,6 @@ final class UserViewController: UIViewController {
     super.viewDidLoad()
 
     viewModel.user
-      .debug("📁")
       .map {
         """
         \($0.name) \($0.surname)

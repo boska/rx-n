@@ -11,9 +11,7 @@ import MapKit
 
 func transactionAlertController(transaction: Transaction) -> UIAlertController {
   let view = UIAlertController(title: "\(transaction.description) € \(transaction.amount) \n \(transaction.effectiveDate)", message: transaction.coordinates, preferredStyle: .actionSheet)
-  view.addAction(UIAlertAction(title: "Open In Maps", style: .default, handler: {
-
-    _ in
+  view.addAction(UIAlertAction(title: "Open In Maps", style: .default, handler: { _ in
     let coordinates = transaction.coordinates
       .split(separator: ",")
       .map { Double($0.replacingOccurrences(of: " ", with: "")) ?? 0.0 }

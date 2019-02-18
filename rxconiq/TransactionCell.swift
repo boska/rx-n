@@ -16,7 +16,6 @@ final class TransactionCell: UITableViewCell {
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     self.descriptionLabel = UILabel()
     self.amountLabel = UILabel()
-    
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     self.addSubview(descriptionLabel)
     self.addSubview(amountLabel)
