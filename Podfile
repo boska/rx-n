@@ -8,6 +8,7 @@ target 'rxconiq' do
     pod 'RxCocoa',    '~> 4.0'
     pod 'RxAlamofire'
     pod 'Cartography', '~> 3.0'
+    pod 'SwiftLint'
 end
 
 # RxTest and RxBlocking make the most sense in the context of unit/integration tests

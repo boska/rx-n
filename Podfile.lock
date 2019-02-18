@@ -13,6 +13,7 @@ PODS:
   - RxSwift (4.3.0)
   - RxTest (4.3.0):
     - RxSwift (~> 4.0)
+  - SwiftLint (0.30.0)
 
 DEPENDENCIES:
   - Cartography (~> 3.0)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - RxTest (~> 4.0)
+  - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -31,6 +33,7 @@ SPEC REPOS:
     - RxCocoa
     - RxSwift
     - RxTest
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -40,7 +43,8 @@ SPEC CHECKSUMS:
   RxCocoa: 71b9cce833fbcb89a8eec11816dd225830c2bd3c
   RxSwift: a9717a34df3179fe63563f76e046ad345078dd3a
   RxTest: 831444848ac3c5efdd7d80ff5dc4b50ba08877a9
+  SwiftLint: 4e37cb5cd33435170dfd09fba089f41fdbf64d53
 
-PODFILE CHECKSUM: a3af77658271ad37a586295c5f56e4fa2c0a613f
+PODFILE CHECKSUM: 20fe7c4450aeae0dbdf88f9188198f25b0f2de21
 
 COCOAPODS: 1.6.0.beta.1
