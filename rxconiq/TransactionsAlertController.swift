@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import MapKit
 
 func transactionAlertController(transaction: Transaction) -> UIAlertController {

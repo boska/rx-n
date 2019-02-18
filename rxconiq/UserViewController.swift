@@ -53,7 +53,6 @@ final class UserViewController: UIViewController {
 
   }
   private func setupConstraints() {
-
     constrain(userLabel, self.view) { userLabel, view in
       userLabel.edges == view.edges
     }
