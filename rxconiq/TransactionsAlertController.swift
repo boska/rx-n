@@ -18,7 +18,7 @@ func transactionAlertController(transaction: Transaction) -> UIAlertController {
     let coordinates = transaction.coordinates
       .split(separator: ",")
       .map { Double($0.replacingOccurrences(of: " ", with: "")) ?? 0.0 }
-    let coordinate = CLLocationCoordinate2DMake(coordinates.first ?? 0.0 , coordinates.last ?? 0.0)
+    let coordinate = CLLocationCoordinate2DMake(coordinates.first ?? 0.0, coordinates.last ?? 0.0)
     let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
 
     mapItem.name = "\(transaction.description) @ \(transaction.effectiveDate) (€ \(transaction.amount))"

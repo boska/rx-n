@@ -27,8 +27,6 @@ class rxconiqUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-  
- 
     func testExample() {
       let app = XCUIApplication()
       app.tables.staticTexts["Transaction 10"].tap()

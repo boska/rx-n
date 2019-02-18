@@ -29,5 +29,5 @@ let transactionsProvider = transactionsApi
       .map {
         try decoder.decode([Transaction].self, from: $0.1)
     }
-    
+
 }

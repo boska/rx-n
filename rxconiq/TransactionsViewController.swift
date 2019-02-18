@@ -17,7 +17,6 @@ final class TransactionsViewController: UIViewController {
   private var disposeBag = DisposeBag()
   private let viewModel: TransactionsViewModel
 
-
   init(viewModel: TransactionsViewModel) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
