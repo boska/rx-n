@@ -14,18 +14,17 @@ private let decoder = JSONDecoder()
 private let transactionsApiEndpoint = BehaviorRelay(value: "http://demo5481020.mockable.io/transactions")
 
 let transactionsProvider = transactionsApiEndpoint
-  .flatMap {
-    requestData(.get, $0)
-      .do(onNext: {
-        guard let nextPage = $0.0.allHeaderFields["next-page"] as? String else {
+  .flatMap({ endPoint in
+    requestData(.get, endPoint)
+      .do(onNext: { (response, _) in
+        guard let nextPage = response.allHeaderFields["next-page"] as? String else {
           return
         }
         if (!nextPage.isEmpty) {
-          transactionsApiEndpoint.accept(nextPage) // it will wait until next event in loadNextPage
+          transactionsApiEndpoint.accept(nextPage)
         }
       })
-      .map {
-        try decoder.decode([Transaction].self, from: $0.1)
-    }
-
-}
+      .map({ (_, data) in
+        try decoder.decode([Transaction].self, from: data)
+      })
+  })
