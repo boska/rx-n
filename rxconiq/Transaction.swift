@@ -41,7 +41,17 @@ extension Transaction {
     let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
     let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
     mapItem.name = "\(description) @ \(effectiveDate) (€ \(amount))"
-    
     return mapItem
+  }
+  
+  func alert() -> UIAlertController {
+    let alert = UIAlertController(title: "\(description) € \(amount) \n \(effectiveDate)", message: coordinates, preferredStyle: .actionSheet)
+    alert.addAction(UIAlertAction(title: "Open In Maps", style: .default, handler: { _ in
+      if let mapItem = self.mapItem {
+        mapItem.openInMaps()
+      }
+    }))
+    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+    return alert
   }
 }

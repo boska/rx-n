@@ -13,6 +13,6 @@ class TinyRouter {
   var root: UIViewController?
   static let shared = TinyRouter()
   func navigate(to: Transaction) {
-    self.root?.present(transactionAlertController(transaction: to), animated: true)
+    self.root?.present(to.alert(), animated: true)
   }
 }

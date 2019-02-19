@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8D024AE821F7289B00E72104 /* TinyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D024AE721F7289B00E72104 /* TinyRouter.swift */; };
-		8D024AEA21F728B900E72104 /* TransactionsAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D024AE921F728B900E72104 /* TransactionsAlertController.swift */; };
 		8D141CD121F7036E00597C07 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D141CD021F7036E00597C07 /* UserViewController.swift */; };
 		8D8547D6221A7E18006D2007 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8547D5221A7E18006D2007 /* TransactionCell.swift */; };
 		8DA9360421F239460082FC70 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA9360321F239460082FC70 /* Transaction.swift */; };
@@ -49,7 +48,6 @@
 		58E0388CE8991CF65DC274CD /* Pods-rxconiqTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxconiqTests.release.xcconfig"; path = "Target Support Files/Pods-rxconiqTests/Pods-rxconiqTests.release.xcconfig"; sourceTree = "<group>"; };
 		6AFB1F66C4D1D2386D958DC8 /* Pods-rxconiq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxconiq.release.xcconfig"; path = "Target Support Files/Pods-rxconiq/Pods-rxconiq.release.xcconfig"; sourceTree = "<group>"; };
 		8D024AE721F7289B00E72104 /* TinyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyRouter.swift; sourceTree = "<group>"; };
-		8D024AE921F728B900E72104 /* TransactionsAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsAlertController.swift; sourceTree = "<group>"; };
 		8D141CD021F7036E00597C07 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8D8547D5221A7E18006D2007 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		8DA9360321F239460082FC70 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				8D8547D5221A7E18006D2007 /* TransactionCell.swift */,
 				8DA9360721F2F5FC0082FC70 /* TransactionsViewModel.swift */,
 				8D141CD021F7036E00597C07 /* UserViewController.swift */,
-				8D024AE921F728B900E72104 /* TransactionsAlertController.swift */,
 				8DA9360321F239460082FC70 /* Transaction.swift */,
 				8D024AE721F7289B00E72104 /* TinyRouter.swift */,
 				8DA9360521F239590082FC70 /* User.swift */,
@@ -418,7 +415,6 @@
 				8D024AE821F7289B00E72104 /* TinyRouter.swift in Sources */,
 				8DA9360621F239590082FC70 /* User.swift in Sources */,
 				8D141CD121F7036E00597C07 /* UserViewController.swift in Sources */,
-				8D024AEA21F728B900E72104 /* TransactionsAlertController.swift in Sources */,
 				8DCF2A8D22082A620018B327 /* TransactionsProvider.swift in Sources */,
 				8DA9360821F2F5FC0082FC70 /* TransactionsViewModel.swift in Sources */,
 				8DF46F0A21F02FD900ABB608 /* TransactionsViewController.swift in Sources */,
