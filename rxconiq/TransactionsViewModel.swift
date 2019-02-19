@@ -9,8 +9,12 @@
 import RxSwift
 import RxCocoa
 
-struct TransactionsViewModel {
-  let items: Driver<[Transaction]>
+extension Reactive where Base == TransactionsViewModel {
+  var items: Driver<[Transaction]> { return base.items }
+}
+
+struct TransactionsViewModel: ReactiveCompatible {
+  fileprivate let items: Driver<[Transaction]>
   let loadNextPage = BehaviorRelay(value: true)
   private let disposeBag = DisposeBag()
   init(provider: Observable<[Transaction]>) {

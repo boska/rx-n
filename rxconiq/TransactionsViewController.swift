@@ -34,7 +34,7 @@ final class TransactionsViewController: UIViewController {
     tableView.dataSource = nil
     tableView.register(TransactionCell.self, forCellReuseIdentifier: "Cell")
     
-    viewModel.items
+    viewModel.rx.items
       .drive(tableView.rx.items(cellIdentifier: "Cell", cellType: TransactionCell.self)) { (_, data, cell) in
         cell.configure(data: data)
       }.disposed(by: disposeBag)
