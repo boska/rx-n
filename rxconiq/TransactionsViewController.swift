@@ -48,7 +48,7 @@ final class TransactionsViewController: UIViewController {
       .filter({ [tableView] offset in
         tableView.contentSize.height > 0 && offset.y >= tableView.contentSize.height - tableView.frame.size.height })
       .map({ _ in true })
-      .bind(to: viewModel.loadNextPage)
+      .bind(to: viewModel.rx.loadNextPage)
       .disposed(by: disposeBag)
     
   }

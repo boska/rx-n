@@ -11,12 +11,13 @@ import RxCocoa
 
 extension Reactive where Base == TransactionsViewModel {
   var items: Driver<[Transaction]> { return base.items }
+  var loadNextPage: BehaviorRelay<Bool> { return base.loadNextPage }
 }
 
 struct TransactionsViewModel: ReactiveCompatible {
   fileprivate let items: Driver<[Transaction]>
-  let loadNextPage = BehaviorRelay(value: true)
-  private let disposeBag = DisposeBag()
+  fileprivate let loadNextPage = BehaviorRelay(value: true)
+
   init(provider: Observable<[Transaction]>) {
     items = Observable.zip(loadNextPage, provider)
       .map { $1 }
