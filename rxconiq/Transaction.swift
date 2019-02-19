@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct Transaction: Codable {
   var coordinates: String
@@ -20,5 +21,27 @@ struct Transaction: Codable {
     case date
     case description
     case amount
+  }
+}
+
+extension Transaction {
+  var mapItem: MKMapItem? {
+    let coordinatesDoubles = coordinates
+      .split(separator: ",")
+      .map({ $0.trimmingCharacters(in: .whitespaces) })
+      .compactMap({ Double($0) })
+    
+    guard
+      let latitude = coordinatesDoubles.first,
+      let longitude = coordinatesDoubles.last
+    else {
+      return nil
+    }
+    
+    let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+    let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
+    mapItem.name = "\(description) @ \(effectiveDate) (€ \(amount))"
+    
+    return mapItem
   }
 }

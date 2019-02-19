@@ -7,21 +7,15 @@
 //
 
 import Foundation
-import MapKit
+import UIKit
 
 func transactionAlertController(transaction: Transaction) -> UIAlertController {
-  let view = UIAlertController(title: "\(transaction.description) € \(transaction.amount) \n \(transaction.effectiveDate)", message: transaction.coordinates, preferredStyle: .actionSheet)
-  view.addAction(UIAlertAction(title: "Open In Maps", style: .default, handler: { _ in
-    let coordinates = transaction.coordinates
-      .split(separator: ",")
-      .map { Double($0.replacingOccurrences(of: " ", with: "")) ?? 0.0 }
-    let coordinate = CLLocationCoordinate2DMake(coordinates.first ?? 0.0, coordinates.last ?? 0.0)
-    let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary: nil))
-
-    mapItem.name = "\(transaction.description) @ \(transaction.effectiveDate) (€ \(transaction.amount))"
-    mapItem.openInMaps()
-
+  let alert = UIAlertController(title: "\(transaction.description) € \(transaction.amount) \n \(transaction.effectiveDate)", message: transaction.coordinates, preferredStyle: .actionSheet)
+  alert.addAction(UIAlertAction(title: "Open In Maps", style: .default, handler: { _ in
+    if let mapItem = transaction.mapItem {
+      mapItem.openInMaps()
+    }
   }))
-  view.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-  return view
+  alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+  return alert
 }

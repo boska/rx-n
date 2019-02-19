@@ -45,9 +45,8 @@ final class TransactionsViewController: UIViewController {
       }).disposed(by: disposeBag)
     
     tableView.rx.contentOffset
-      .filter({ [tableView] in
-        tableView.contentSize.height > 0 && $0.y >= tableView.contentSize.height - tableView.frame.size.height })
-      .debounce(0.5, scheduler: MainScheduler.instance)
+      .filter({ [tableView] offset in
+        tableView.contentSize.height > 0 && offset.y >= tableView.contentSize.height - tableView.frame.size.height })
       .map({ _ in true })
       .bind(to: viewModel.loadNextPage)
       .disposed(by: disposeBag)
