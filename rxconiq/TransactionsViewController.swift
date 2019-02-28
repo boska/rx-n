@@ -44,13 +44,6 @@ final class TransactionsViewController: UIViewController {
         TinyRouter.shared.navigate(to: $0)
       }).disposed(by: disposeBag)
     
-    tableView.rx.contentOffset
-      .filter({ [tableView] offset in
-        tableView.contentSize.height > 0 && offset.y >= tableView.contentSize.height - tableView.frame.size.height })
-      .map({ _ in true })
-      .bind(to: viewModel.rx.loadNextPage)
-      .disposed(by: disposeBag)
-    
   }
 }
 
