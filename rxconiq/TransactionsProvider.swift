@@ -1,30 +1,18 @@
-//
-//  TransactionsProvider.swift
-//  rxconiq
-//
-//  Created by Boska on 2019/2/4.
-//  Copyright © 2019 boska. All rights reserved.
-//
+import RxSwift
 
-import RxAlamofire
-import RxCocoa
-
-private let decoder = JSONDecoder()
-
-private let transactionsApiEndpoint = BehaviorRelay(value: "http://demo5481020.mockable.io/transactions")
-
-let transactionsProvider = transactionsApiEndpoint
-  .flatMap({ endPoint in
-    requestData(.get, endPoint)
-      .do(onNext: { (response, _) in
-        guard let nextPage = response.allHeaderFields["next-page"] as? String else {
-          return
-        }
-        if (!nextPage.isEmpty) {
-          transactionsApiEndpoint.accept(nextPage)
-        }
-      })
-      .map({ (_, data) in
-        try decoder.decode([Transaction].self, from: data)
-      })
-  })
+struct API {
+  static private let baseURL = "http://demo5481020.mockable.io/"
+  static private let transactionsRoute = "transactions"
+  private let decoder = JSONDecoder()
+  static var transactions: Observable<[Transaction]> {
+    guard let request = try? URLRequest(url: baseURL + transactionsRoute, method: .get) else {
+      fatalError()
+    }
+    let decoder = JSONDecoder()
+    return URLSession.shared.rx.response(request: request)
+      .map({ result in
+        let (_,data) = result
+        return try decoder.decode([Transaction].self, from: data)
+    })
+  }
+}
