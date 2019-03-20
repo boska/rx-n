@@ -25,7 +25,7 @@ rest part of rx-0 is not worth your time to move on but rx-0 get roasted on r/iO
 
 so at least it gains a piece of advice from masters, gg wp rx-0
 
-[informative comment](https://www.reddit.com/r/iOSProgramming/comments/apqwji/i_got_rejected_from_an_interview_seek_for/egbllpr)
+[informative comment](https://www.reddit.com/r/iOSProgramming/comments/apqwji/i_got_rejected_from_an_interview_seek_for/egbllpr)
 
 `Exposing Subjects - this for me is a massive red flag that someone doesn't know about how Rx works, or cares to match the Rx style.`
 
