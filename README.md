@@ -29,8 +29,6 @@ so at least it gains a piece of advice from masters, gg wp rx-0
 `Exposing Subjects - this for me is a massive red flag that someone doesn't know about how Rx works, or cares to match the Rx style.`
 
 So the Rx journey begins...
-
-[ReactiveX](http://reactivex.io/)
 ![](https://i.imgur.com/nhBP5jJ.png)
 # YOU SHALL NOT PASS
 
