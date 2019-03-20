@@ -8,12 +8,13 @@
 Boska is a padawan of Rx. 
 rx- a series of open-source project learn how to solve things with RxSwift
 
-- rx-0  
-- rx-1 Pagination
-- rx-2 RxWeather
-- rx-3 Rewrite classic FLEX from flipboard with RxSwift and modern swift
-- rx-4 TBD...
- 
+[rx-0-the-begin](https://github.com/boska/rx-0-the-begin)  
+[rx-1-the-pagination api call](https://github.com/boska/rx-1-Autofinder)  
+[rx-2-rx-weather](https://github.com/boska)  
+[rx-3-rx-explorer](https://gist.github.com/boska/f9b882dc399c046caefc5e4f783d4687)
+
+tbd
+
 # origin
 
 rx-0 is a reference project from Jan 17 2019 
