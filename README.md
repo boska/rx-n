@@ -17,8 +17,6 @@ tbd
 
 # origin
 
-rx-0 is a reference project from Jan 17 2019 
-
 Basically, it shows how dangerous to use a powerful tool before master it.
 Again, thanks to job interviews and it just a code challenge, no one hurts don't worry.
 
