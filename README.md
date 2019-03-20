@@ -31,7 +31,7 @@ so at least it gains a piece of advice from masters, gg wp rx-0
 So the Rx journey begins...
 
 [ReactiveX](http://reactivex.io/)
-![](http://img.lum.dolimg.com/v1/images/Mace-Windu_b35242e5.jpeg?region=0%2C51%2C1638%2C819)
+![](https://i.imgur.com/nhBP5jJ.png)
 # YOU SHALL NOT PASS
 
 
