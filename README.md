@@ -3,7 +3,7 @@
 ## rx-0
 
 Boska is a padawan of Rx. 
-rx- a series of open-source project learn how to solve things with RxSwift
+rx-n a series of open-source project show how he solve things with RxSwift
 
 RxSwift is one of the ways that try to solve async problem differs from UIKit*, PromiseKit... 
  
@@ -18,9 +18,9 @@ so at least it gains a piece of advice from masters, gg wp rx-0, and it's time t
 
 `Exposing Subjects - this for me is a massive red flag that someone doesn't know about how Rx works, or cares to match the Rx style.`
 
-the Rx journey begins...
-
-
+if you looking for prove example for RxSwift
+[RxSwiftExamples](https://github.com/DroidsOnRoids/RxSwiftExamples)
+is another great repo
 
 ![](https://i.imgur.com/nhBP5jJ.png)
 
