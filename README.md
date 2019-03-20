@@ -1,4 +1,35 @@
 ![](http://wallpapers-best.com/uploads/posts/2015-10/15_star_wars.jpg)
+# RxSwift is one of the ways that try to solve async problem with a reactive way 
+
+[ReactiveX](http://reactivex.io/)
+
+# What
+
+Boska is a padawan of Rx. 
+rx- a series of open-source project learn how to solve things with RxSwift
+
+- rx-0  
+- rx-1 Pagination
+- rx-3 RxWeather
+- rx-4 Flex rewrite with Swift and Rx
+- rx-5 Rx Reddit
+ 
+# rx-0
+
+rx-0 is a reference project from Jan 17 2019 
+
+Basically, it shows how dangerous to use a powerful tool before master it.
+Again thanks to job interviews it just a code challenge, no one hurts don't worry.
+
+rest part of rx-0 is not worth your time to move on but rx-0 get roasted on r/iOSProgramming
+
+so at least it gains a piece of advice from masters, gg wp rx-0
+
+[informative comment](https://www.reddit.com/r/iOSProgramming/comments/apqwji/i_got_rejected_from_an_interview_seek_for/egbllpr)
+
+`Exposing Subjects - this for me is a massive red flag that someone doesn't know about how Rx works, or cares to match the Rx style.`
+
+So the Rx journey begins...
 
 # RxConiq
 
