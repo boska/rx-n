@@ -90,7 +90,8 @@ struct ManufacturerListViewModel: ReactiveCompatible {
 }
 ```
 
-##rx-02
+
+## rx-02
 
 A Rx style weather app with OpenWeather API
 
