@@ -4,12 +4,12 @@
 
 Boska is a padawan of Rx. 
 
-rx-n a series of open-source project show how he solve things with RxSwift
+rx-n is a series of RxSwift projects generated during the job interviews
+ 
+RxSwift is one of the ways that try to solve async problem differs from UIKit*, PromiseKit...,rx-n shows how dangerous to use a powerful tool before master it.
+Again, thanks to job interviews and it just a code challenge, no one hurts don't worry.
 
 RxSwift is one of the ways that try to solve async problem differs from UIKit*, PromiseKit... 
- 
-Basically, it shows how dangerous to use a powerful tool before master it.
-Again, thanks to job interviews and it just a code challenge, no one hurts don't worry.
 
 if you looking for quality example for RxSwift
 [RxSwiftExamples](https://github.com/DroidsOnRoids/RxSwiftExamples)
