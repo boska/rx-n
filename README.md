@@ -11,7 +11,7 @@ RxSwift is one of the ways that try to solve async problem differs from UIKit*, 
 Basically, it shows how dangerous to use a powerful tool before master it.
 Again, thanks to job interviews and it just a code challenge, no one hurts don't worry.
 
-if you looking for prove example for RxSwift
+if you looking for quality example for RxSwift
 [RxSwiftExamples](https://github.com/DroidsOnRoids/RxSwiftExamples)
 is another great repo
 
